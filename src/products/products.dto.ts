@@ -5,6 +5,11 @@ import { CreateProductTypesDto } from 'src/product-types/product-types.dto';
 
 export class CreateProductsDto {
   @IsNotEmpty()
+  @IsNumber()
+  @ApiProperty()
+  product_id: number;
+
+  @IsNotEmpty()
   @IsString()
   @ApiProperty()
   product_name: string;
@@ -21,6 +26,12 @@ export class CreateProductsDto {
 }
 
 export class UpdateProductsDto {
+  @IsNotEmpty()
+  @IsNumber()
+  @ApiProperty()
+  product_id: number;
+
+  @IsNotEmpty()
   @IsString()
   @ApiProperty()
   product_name: string;

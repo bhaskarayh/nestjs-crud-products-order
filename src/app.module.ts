@@ -10,15 +10,27 @@ import { ProductsEntity } from './products/products.entity';
 import { ProductTypesEntity } from './product-types/product-types.entity';
 import { ProductTypesController } from './product-types/product-types.controller';
 import { ProductTypesService } from './product-types/product_types.service';
+import { OrdersEntity } from './orders/orders.entity';
+import { OrdersController } from './orders/orders.controller';
+import { OrdersService } from './orders/orders.service';
 
 @Module({
   imports: [
     TypeOrmModule.forRootAsync({
       useClass: DatabaseConnectionService,
     }),
-    TypeOrmModule.forFeature([ProductsEntity, ProductTypesEntity]),
+    TypeOrmModule.forFeature([
+      ProductsEntity,
+      ProductTypesEntity,
+      OrdersEntity,
+    ]),
   ],
-  controllers: [AppController, ProductsController, ProductTypesController],
-  providers: [AppService, ProductsService, ProductTypesService],
+  controllers: [
+    AppController,
+    ProductsController,
+    ProductTypesController,
+    OrdersController,
+  ],
+  providers: [AppService, ProductsService, ProductTypesService, OrdersService],
 })
 export class AppModule {}
