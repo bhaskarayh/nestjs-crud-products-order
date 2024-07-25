@@ -26,7 +26,7 @@ export class ProductsService {
   createProduct(createProductDto: CreateProductsDto): Promise<ProductsEntity> {
     const product: ProductsEntity = new ProductsEntity();
     product.product_name = createProductDto.product_name;
-    product.productType = createProductDto.productType;
+    product.productType.product_type_id = createProductDto.product_type_id;
     product.stock = createProductDto.stock;
 
     return this.productsRepository.save(product);

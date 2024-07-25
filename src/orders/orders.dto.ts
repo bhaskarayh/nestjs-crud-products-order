@@ -9,8 +9,13 @@ export class CreateOrdersDto {
   @ApiProperty()
   sold: number;
 
+  @IsNumber()
+  @IsNotEmpty()
   @ApiProperty()
-  @Type(() => CreateProductsDto)
-  @Expose()
-  product: CreateProductsDto;
+  product_id: number;
+
+  // @ApiProperty()
+  // @Type(() => CreateProductsDto)
+  // @Expose()
+  // product: CreateProductsDto;
 }

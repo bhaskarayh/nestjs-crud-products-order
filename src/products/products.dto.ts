@@ -20,9 +20,14 @@ export class CreateProductsDto {
   stock: number;
 
   @ApiProperty()
-  @Type(() => CreateProductTypesDto)
-  @Expose()
-  productType: CreateProductTypesDto;
+  @IsNumber()
+  @IsNotEmpty()
+  product_type_id: number;
+
+  // @ApiProperty()
+  // @Type(() => CreateProductTypesDto)
+  // @Expose()
+  // productType: CreateProductTypesDto;
 }
 
 export class UpdateProductsDto {

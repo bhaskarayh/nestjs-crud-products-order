@@ -40,16 +40,8 @@ open `localhost:3000/api/docs`
 ## Packages
 
 - `nestjsx/crud` [documentation](https://github.com/nestjsx/crud)
-- authentication with `passport and jwt strategy` [documentation](https://docs.nestjs.com/techniques/authentication)
 - OpenApi `nestjs/swagger`[documentation](https://docs.nestjs.com/recipes/swagger)
-- example todo CRUD operation using `nestjsx/crud`
 - `TypeOrm` [documentation](https://docs.nestjs.com/recipes/sql-typeorm)
-
-## Run test
-
-```bash
-$ pnpm test
-```
 
 ## Contributing
 
